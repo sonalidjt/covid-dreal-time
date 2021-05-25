@@ -26,7 +26,7 @@ camera.position.setX(-3)
 renderer.render(scene, camera)
 
 //setting a background
-scene.background = new THREE.TextureLoader().load('media/background.jpg')
+scene.background = new THREE.TextureLoader().load('media/background1.jpg')
 
 //light up the scene
 const pointLight = new THREE.PointLight(0xffffff)
