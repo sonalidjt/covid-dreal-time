@@ -1,8 +1,10 @@
 import './style.css'
 import * as THREE from 'three'
-//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 // imported everything above
-
+import b1 from './background1.jpg'
+import e1 from './earth2.jpg'
+import n1 from './normal4.jpg'
 //creating instances of required classes
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(
@@ -14,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 })
-//const controls = new OrbitControls(camera, renderer.domElement)
+const controls = new OrbitControls(camera, renderer.domElement)
 
 //setting rendered properties and camera position
 renderer.setPixelRatio(window.devicePixelRatio)
@@ -26,7 +28,7 @@ camera.position.setX(-3)
 renderer.render(scene, camera)
 
 //setting a background
-scene.background = new THREE.TextureLoader().load('background1.jpg')
+scene.background = new THREE.TextureLoader().load(b1)
 
 //light up the scene
 const pointLight = new THREE.PointLight(0xffffff)
@@ -36,8 +38,8 @@ const ambientLight = new THREE.AmbientLight(0xffffff)
 scene.add(pointLight, ambientLight)
 
 //adding texture to earth
-const earthTexture = new THREE.TextureLoader().load('earth2.jpg')
-const texture = new THREE.TextureLoader().load('normal4.jfif')
+const earthTexture = new THREE.TextureLoader().load(e1)
+const texture = new THREE.TextureLoader().load(n1)
 //creating earth
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(13, 32, 32),
@@ -52,7 +54,7 @@ scene.add(earth)
 function animate() {
   earth.rotation.y += 0.002
   requestAnimationFrame(animate)
-  //controls.update()
+  controls.update()
   //keep updating the scene
   renderer.render(scene, camera)
 }
