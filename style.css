@@ -2,6 +2,7 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 main {
@@ -11,11 +12,17 @@ main {
   position: absolute;
 
   margin: 0px auto;
-  padding: 120px 0px;
-  
+  padding: 120px 10px;
+
   display: grid;
 }
 
 button {
   width: 13vw;
+}
+
+code {
+  font-size: 20px;
+  color: #e65394;
+  background: #ffffff40;
 }
