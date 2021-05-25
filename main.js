@@ -30,7 +30,7 @@ pointLight.position.set(15, 15, 15)
 
 const ambientLight = new THREE.AmbientLight(0xffffff)
 scene.add(pointLight, ambientLight)
-
+//scene.add(pointLight)
 const controls = new OrbitControls(camera, renderer.domElement)
 
 const spaceTexture = new THREE.TextureLoader().load('background.jpg')
