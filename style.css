@@ -17,6 +17,10 @@ main {
   display: grid;
 }
 
+.btn {
+  font-size: 0.8rem;
+}
+
 a {
   width: 13vw;
 }

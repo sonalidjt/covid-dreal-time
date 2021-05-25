@@ -1,6 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 // imported everything above
 
 //creating instances of required classes
@@ -14,7 +14,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 })
-const controls = new OrbitControls(camera, renderer.domElement)
+//const controls = new OrbitControls(camera, renderer.domElement)
 
 //setting rendered properties and camera position
 renderer.setPixelRatio(window.devicePixelRatio)
@@ -52,7 +52,7 @@ scene.add(earth)
 function animate() {
   earth.rotation.y += 0.002
   requestAnimationFrame(animate)
-  controls.update()
+  //controls.update()
   //keep updating the scene
   renderer.render(scene, camera)
 }
