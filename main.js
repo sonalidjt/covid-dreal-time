@@ -26,7 +26,7 @@ camera.position.setX(-3)
 renderer.render(scene, camera)
 
 //setting a background
-scene.background = new THREE.TextureLoader().load('background.jpg')
+scene.background = new THREE.TextureLoader().load('media/background.jpg')
 
 //light up the scene
 const pointLight = new THREE.PointLight(0xffffff)
@@ -36,8 +36,8 @@ const ambientLight = new THREE.AmbientLight(0xffffff)
 scene.add(pointLight, ambientLight)
 
 //adding texture to earth
-const earthTexture = new THREE.TextureLoader().load('earth2.jpg')
-const texture = new THREE.TextureLoader().load('normal4.jfif')
+const earthTexture = new THREE.TextureLoader().load('media/earth2.jpg')
+const texture = new THREE.TextureLoader().load('media/normal4.jfif')
 //creating earth
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(13, 32, 32),
